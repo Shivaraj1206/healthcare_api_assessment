@@ -178,8 +178,6 @@ def get_data_quality_issues(patients):
 
     return list(issues)
 
-
-
 # Submit results
 
 def submit_results(high_risk, fever, data_quality):
@@ -198,13 +196,10 @@ def submit_results(high_risk, fever, data_quality):
 
     print(response.json())
 
-
-
 # MAIN
 
 if __name__ == "__main__":
     patients = fetch_all_patients()
-
     high_risk = get_high_risk_patients(patients)
     fever = get_fever_patients(patients)
     data_quality = get_data_quality_issues(patients)
